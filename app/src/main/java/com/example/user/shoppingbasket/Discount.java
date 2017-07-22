@@ -19,6 +19,8 @@ public class Discount implements Discountable {
 
     }
 
+    // I want to make this method private because it is called only from within the class
+    // However, I am directly testing the method and the JUnit test class then cannot access the method if made private
     public int applyTwentyPoundDiscount() {
 
         double twentyPoundDiscount = basket.grossTotal();
@@ -31,6 +33,7 @@ public class Discount implements Discountable {
 
     }
 
+    // As above comment
     public int applyLoyaltyDiscount() {
 
         double loyaltyDiscount = applyTwentyPoundDiscount();

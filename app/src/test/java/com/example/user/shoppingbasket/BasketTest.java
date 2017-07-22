@@ -15,7 +15,10 @@ public class BasketTest {
     Item item1;
     Item item2;
     Item item3;
+    Item item4;
     Discount discount;
+    Customer customer;
+
 
     @Before
     public void before() {
@@ -23,6 +26,7 @@ public class BasketTest {
         item1 = new Item("Mr Men Boxset", 30);
         item2 = new Item("Frozen bike", 90);
         item3 = new Item("Play Doh", 10);
+        item4 = new Bogof("Frozen bike", 90);
     }
 
     @Test
@@ -65,6 +69,18 @@ public class BasketTest {
     public void checkGrossTotal_emptyBasket() {
         assertEquals(0, basket.grossTotal());
 
+    }
+
+    @Test
+    public void canDiscountPrice() {
+        basket.addItem(item1);
+        basket.addItem(item2);
+        basket.addItem(item3);
+        basket.addItem(item4);
+        customer = new Customer("Eddie Ng", true);
+        discount = new Discount(basket, customer);
+        assertEquals(4, basket.countItems());
+        assertEquals(115, discount.discountPrice());
     }
 
 

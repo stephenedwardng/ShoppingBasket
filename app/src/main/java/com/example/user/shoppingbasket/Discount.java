@@ -4,7 +4,7 @@ package com.example.user.shoppingbasket;
  * Created by user on 22/07/2017.
  */
 
-public class Discount {
+public class Discount implements Discountable {
 
     private Basket basket;
     private Customer customer;

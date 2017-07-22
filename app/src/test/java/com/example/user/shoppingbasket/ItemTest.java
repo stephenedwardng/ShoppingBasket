@@ -28,7 +28,7 @@ public class ItemTest {
     }
 
 //    @Test
-//    public void canGetDiscount() {
+//    public void canDiscountPrice() {
 //        assertEquals(TWENTY, item1.getDiscount());
 //    }
 

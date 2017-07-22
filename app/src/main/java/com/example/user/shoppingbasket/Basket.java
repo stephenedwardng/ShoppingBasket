@@ -9,9 +9,11 @@ import java.util.ArrayList;
 public class Basket{
 
     private ArrayList<Item> items;
+    private Discountable discount;
 
-    public Basket() {
+    public Basket(Discountable discount) {
         items = new ArrayList<Item>();
+        this.discount = discount;
     }
 
     public int countItems() {
@@ -44,9 +46,9 @@ public class Basket{
 
     }
 
-//    public int discountPrice(int discount) {
-//
-//    }
+    public int discountPrice() {
+        return discount.discountPrice();
+    }
 
 
 }

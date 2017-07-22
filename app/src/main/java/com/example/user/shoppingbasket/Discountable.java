@@ -6,6 +6,6 @@ package com.example.user.shoppingbasket;
 
 public interface Discountable {
 
-    int discountPrice(int discount);
+    int discountPrice();
 
 }

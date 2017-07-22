@@ -23,7 +23,7 @@ public class Discount {
             twentyPoundDiscount = basket.grossTotal() * 0.9;
         }
 
-        return (int)twentyPoundDiscount;
+        return (int)Math.round(twentyPoundDiscount);
 
     }
 
@@ -35,7 +35,7 @@ public class Discount {
             loyaltyDiscount = applyTwentyPoundDiscount() * 0.98;
         }
 
-        return (int)loyaltyDiscount;
+        return (int)Math.round(loyaltyDiscount);
 
     }
 

@@ -42,4 +42,25 @@ public class DiscountTest {
         discount = new Discount(basket, customer);
         assertEquals(10, discount.applyTwentyPoundDiscount());
     }
+
+    @Test
+    public void canApplyLoyaltyDiscount__has_loyalty_card() {
+        basket.addItem(item1);
+        basket.addItem(item2);
+        basket.addItem(item3);
+        customer = new Customer("Eddie Ng", true);
+        discount = new Discount(basket, customer);
+        assertEquals(115, discount.applyLoyaltyDiscount());
+    }
+
+    @Test
+    public void canApplyLoyaltyDiscount__no_loyalty_card() {
+        basket.addItem(item1);
+        basket.addItem(item2);
+        basket.addItem(item3);
+        customer = new Customer("Eddie Ng", false);
+        discount = new Discount(basket, customer);
+        assertEquals(117, discount.applyLoyaltyDiscount());
+    }
+
 }

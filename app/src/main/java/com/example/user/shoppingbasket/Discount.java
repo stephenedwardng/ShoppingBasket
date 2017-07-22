@@ -36,6 +36,11 @@ public class Discount {
         }
 
         return (int)loyaltyDiscount;
+
+    }
+
+    public int discountPrice() {
+        return applyLoyaltyDiscount();
     }
 
 }

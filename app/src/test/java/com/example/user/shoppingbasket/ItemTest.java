@@ -2,8 +2,6 @@ package com.example.user.shoppingbasket;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static behaviours.Discount.*;
 import static org.junit.Assert.assertEquals;
 
 /**

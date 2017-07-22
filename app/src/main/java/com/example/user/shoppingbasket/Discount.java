@@ -11,8 +11,10 @@ public class Discount implements Discountable {
     private final int TWENTYPOUND = 20;
 
     public Discount(Basket basket, Customer customer) {
+
         this.basket = basket;
         this.customer = customer;
+
     }
 
     public int applyTwentyPoundDiscount() {
@@ -40,7 +42,9 @@ public class Discount implements Discountable {
     }
 
     public int discountPrice() {
+
         return applyLoyaltyDiscount();
+
     }
 
 }

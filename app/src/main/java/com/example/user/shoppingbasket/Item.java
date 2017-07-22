@@ -10,16 +10,22 @@ public class Item {
     private int recommendedRetailPrice;
 
     public Item(String name, int recommendedRetailPrice) {
+
         this.name = name;
         this.recommendedRetailPrice = recommendedRetailPrice;
+
     }
 
     public String getName() {
+
         return name;
+
     }
 
     public int getRecommendedRetailPrice() {
+
         return recommendedRetailPrice;
+
     }
 
 

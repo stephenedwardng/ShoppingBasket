@@ -12,25 +12,35 @@ public class Basket{
     private Discountable discount;
 
     public Basket(Discountable discount) {
+
         items = new ArrayList<Item>();
         this.discount = discount;
+
     }
 
     public int countItems() {
+
         return items.size();
+
     }
 
     public void addItem(Item item) {
+
         items.add(item);
+
     }
 
     public void removeItem(Item item) {
+
         int index = items.indexOf(item);
         items.remove(index);
+
     }
 
     public void empty() {
+
         items.clear();
+
     }
 
     // make private
@@ -47,7 +57,9 @@ public class Basket{
     }
 
     public int discountPrice() {
+
         return discount.discountPrice();
+
     }
 
 

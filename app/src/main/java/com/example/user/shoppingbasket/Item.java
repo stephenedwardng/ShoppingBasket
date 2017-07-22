@@ -6,8 +6,8 @@ package com.example.user.shoppingbasket;
 
 public class Item {
 
-    private String name;
-    private int recommendedRetailPrice;
+    protected String name;
+    protected int recommendedRetailPrice;
 
     public Item(String name, int recommendedRetailPrice) {
 
@@ -27,6 +27,7 @@ public class Item {
         return recommendedRetailPrice;
 
     }
+
 
 
 }

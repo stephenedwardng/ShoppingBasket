@@ -18,6 +18,10 @@ public class Basket{
 
     }
 
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
     public int countItems() {
 
         return items.size();

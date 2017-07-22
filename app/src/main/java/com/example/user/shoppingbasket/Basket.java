@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 21/07/2017.
  */
 
-public class Basket {
+public class Basket implements Discountable{
 
     private ArrayList<Item> items;
 
@@ -31,15 +31,22 @@ public class Basket {
         items.clear();
     }
 
+    // make private
     public int grossTotal() {
 
         int grossTotal = 0;
 
         for (Item item : items) {
-            grossTotal += item.getPrice();
+            grossTotal += item.getRecommendedRetailPrice();
         }
 
         return grossTotal;
+
     }
+
+    public int discountPrice(int discount) {
+
+    }
+
 
 }

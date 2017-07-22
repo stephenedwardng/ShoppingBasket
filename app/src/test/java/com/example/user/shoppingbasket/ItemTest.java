@@ -16,7 +16,7 @@ public class ItemTest {
 
     @Before
     public void before() {
-        item1 = new Item("Mr Men Boxset", 30, TWENTY);
+        item1 = new Item("Mr Men Boxset", 30);
     }
 
     @Test
@@ -25,13 +25,13 @@ public class ItemTest {
     }
 
     @Test
-    public void canGetPrice() {
-        assertEquals(30, item1.getPrice());
+    public void canGetRecommendedRetailPrice() {
+        assertEquals(30, item1.getRecommendedRetailPrice());
     }
 
-    @Test
-    public void canGetDiscount() {
-        assertEquals(TWENTY, item1.getDiscount());
-    }
+//    @Test
+//    public void canGetDiscount() {
+//        assertEquals(TWENTY, item1.getDiscount());
+//    }
 
 }

@@ -46,7 +46,7 @@ public class Basket{
         int grossTotal = 0;
 
         for (Item item : items) {
-            grossTotal += item.getRecommendedRetailPrice();
+            grossTotal += item.getPrice();
         }
 
         return grossTotal;

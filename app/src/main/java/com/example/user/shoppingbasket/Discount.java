@@ -17,7 +17,7 @@ public class Discount implements Discountable {
 
     }
 
-    public int applyTwentyPoundDiscount() {
+    public int applyPercentageDiscount() {
 
         double twentyPoundDiscount = basket.grossTotal();
 
@@ -31,10 +31,10 @@ public class Discount implements Discountable {
 
     public int applyLoyaltyDiscount() {
 
-        double loyaltyDiscount = applyTwentyPoundDiscount();
+        double loyaltyDiscount = applyPercentageDiscount();
 
         if (customer.hasLoyaltyCard()) {
-            loyaltyDiscount = applyTwentyPoundDiscount() * 0.98;
+            loyaltyDiscount = applyPercentageDiscount() * 0.98;
         }
 
         return (int)Math.round(loyaltyDiscount);

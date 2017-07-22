@@ -33,14 +33,14 @@ public class DiscountTest {
         basket.addItem(item2);
         basket.addItem(item3);
         discount = new Discount(basket, customer);
-        assertEquals(117, discount.applyTwentyPoundDiscount());
+        assertEquals(117, discount.applyPercentageDiscount());
     }
 
     @Test
     public void canApplyTwentyPoundDiscount__under_20_pound() {
         basket.addItem(item3);
         discount = new Discount(basket, customer);
-        assertEquals(10, discount.applyTwentyPoundDiscount());
+        assertEquals(10, discount.applyPercentageDiscount());
     }
 
     @Test

@@ -7,12 +7,12 @@ package com.example.user.shoppingbasket;
 public class Item {
 
     protected String name;
-    protected int recommendedRetailPrice;
+    protected int price;
 
-    public Item(String name, int recommendedRetailPrice) {
+    public Item(String name, int price) {
 
         this.name = name;
-        this.recommendedRetailPrice = recommendedRetailPrice;
+        this.price = price;
 
     }
 
@@ -22,9 +22,9 @@ public class Item {
 
     }
 
-    public int getRecommendedRetailPrice() {
+    public int getPrice() {
 
-        return recommendedRetailPrice;
+        return price;
 
     }
 

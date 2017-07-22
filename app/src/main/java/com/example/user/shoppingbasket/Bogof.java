@@ -16,7 +16,7 @@ public class Bogof extends Item {
     }
 
     @Override
-    public int getRecommendedRetailPrice() {
+    public int getPrice() {
 
         return 0;
 

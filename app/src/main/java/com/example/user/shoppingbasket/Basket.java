@@ -9,17 +9,11 @@ import java.util.ArrayList;
 public class Basket{
 
     private ArrayList<Item> items;
-    private Discountable discount;
 
-    public Basket(Discountable discount) {
+    public Basket() {
 
-        items = new ArrayList<Item>();
-        this.discount = discount;
+        items = new ArrayList<>();
 
-    }
-
-    public ArrayList<Item> getItems() {
-        return items;
     }
 
     public int countItems() {

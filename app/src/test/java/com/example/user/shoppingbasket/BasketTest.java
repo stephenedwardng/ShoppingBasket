@@ -22,7 +22,7 @@ public class BasketTest {
 
     @Before
     public void before() {
-        basket = new Basket(discount);
+        basket = new Basket();
         item1 = new Item("Mr Men Boxset", 30);
         item2 = new Item("Frozen bike", 90);
         item3 = new Item("Play Doh", 10);

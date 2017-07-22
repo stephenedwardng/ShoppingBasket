@@ -21,7 +21,7 @@ public class BogofTest {
 
     @Before
     public void before() {
-        basket = new Basket(discount);
+        basket = new Basket();
         item1 = new Item("Frozen bike", 90);
         item2 = new Bogof("Frozen bike", 90);
         item3 = new Item("Mr Men Boxset", 30);

@@ -60,10 +60,11 @@ public class BasketTest {
         assertEquals(130, basket.grossTotal());
     }
 
-//    @Test
-//    public void checkGrossTotal_emptyBasket() {
-//
-//    }
+    @Test
+    public void checkGrossTotal_emptyBasket() {
+        assertEquals(0, basket.grossTotal());
+
+    }
 
 
 }

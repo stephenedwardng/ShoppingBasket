@@ -23,7 +23,7 @@ public class ItemTest {
     }
 
     @Test
-    public void canGetRecommendedRetailPrice() {
+    public void canGetPrice() {
         assertEquals(30, item1.getPrice());
     }
 

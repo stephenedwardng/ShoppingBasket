@@ -71,17 +71,4 @@ public class BasketTest {
 
     }
 
-    @Test
-    public void canDiscountPrice() {
-        basket.addItem(item1);
-        basket.addItem(item2);
-        basket.addItem(item3);
-        basket.addItem(item4);
-        customer = new Customer("Eddie Ng", true);
-        discount = new Discount(basket, customer);
-        assertEquals(4, basket.countItems());
-        assertEquals(115, discount.discountPrice());
-    }
-
-
 }

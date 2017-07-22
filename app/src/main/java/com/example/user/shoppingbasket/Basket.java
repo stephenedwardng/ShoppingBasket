@@ -47,7 +47,6 @@ public class Basket{
 
     }
 
-    // make private
     public int grossTotal() {
 
         int grossTotal = 0;
@@ -59,12 +58,5 @@ public class Basket{
         return grossTotal;
 
     }
-
-    public int discountPrice() {
-
-        return discount.discountPrice();
-
-    }
-
 
 }

@@ -6,17 +6,16 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by user on 22/07/2017.
+ * Created by user on 23/07/2017.
  */
 
-public class DiscountTest {
+public class StaffDiscountTest {
 
     Basket basket;
     Item item1;
     Item item2;
     Item item3;
     Discountable discount;
-    Shoppable customer;
     Shoppable staff;
 
 
@@ -29,40 +28,39 @@ public class DiscountTest {
     }
 
     @Test
-    public void canApplyTwentyPoundDiscount__over_20_pound() {
+    public void canApplyTenPoundDiscount__over_10_pound() {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.addItem(item3);
-        discount = new Discount(basket, customer);
-        assertEquals(117, discount.applyPercentageDiscount());
+        discount = new StaffDiscount(basket, staff);
+        assertEquals(91, discount.applyPercentageDiscount());
     }
 
     @Test
-    public void canApplyTwentyPoundDiscount__under_20_pound() {
+    public void canApplyTenPoundDiscount__under_10_pound() {
         basket.addItem(item3);
-        discount = new Discount(basket, customer);
+        discount = new StaffDiscount(basket, staff);
         assertEquals(10, discount.applyPercentageDiscount());
     }
 
     @Test
-    public void canApplyLoyaltyDiscount__has_loyalty_card() {
+    public void canApplyCardDiscount__has_staff_card() {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.addItem(item3);
-        customer = new Customer("Eddie Ng", true);
-        discount = new Discount(basket, customer);
-        assertEquals(115, discount.applyCardDiscount());
+        staff = new Staff("Eddie Ng", true);
+        discount = new StaffDiscount(basket, staff);
+        assertEquals(86, discount.applyCardDiscount());
     }
 
     @Test
-    public void canApplyLoyaltyDiscount__no_loyalty_card() {
+    public void canApplyStaffDiscount__no_staff_card() {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.addItem(item3);
-        customer = new Customer("Eddie Ng", false);
-        discount = new Discount(basket, customer);
-        assertEquals(117, discount.applyCardDiscount());
+        staff = new Staff("Eddie Ng", false);
+        discount = new StaffDiscount(basket, staff);
+        assertEquals(91, discount.applyCardDiscount());
     }
-
 
 }

@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Created by user on 23/07/2017.
  */
 
-public class StaffDiscountTest {
+public class StaffCustomerDiscountTest {
 
     Basket basket;
     Item item1;

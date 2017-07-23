@@ -35,7 +35,7 @@ public class BogofTest {
         basket.addItem(item3);
         basket.addItem(item4);
         customer = new Customer("Eddie Ng", true);
-        discount = new Discount(basket, customer);
+        discount = new CustomerDiscount(basket, customer);
         assertEquals(4, basket.countItems());
         assertEquals(115, discount.discountPrice());
     }

@@ -4,13 +4,13 @@ package com.example.user.shoppingbasket;
  * Created by user on 22/07/2017.
  */
 
-public class Discount implements Discountable {
+public class CustomerDiscount implements Discountable {
 
     private Basket basket;
     private Shoppable customer;
     private final int TWENTYPOUND = 20;
 
-    public Discount(Basket basket, Shoppable customer) {
+    public CustomerDiscount(Basket basket, Shoppable customer) {
 
         this.basket = basket;
         this.customer = customer;

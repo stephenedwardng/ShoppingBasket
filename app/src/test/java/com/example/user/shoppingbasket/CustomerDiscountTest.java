@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Created by user on 22/07/2017.
  */
 
-public class DiscountTest {
+public class CustomerDiscountTest {
 
     Basket basket;
     Item item1;
@@ -33,14 +33,14 @@ public class DiscountTest {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.addItem(item3);
-        discount = new Discount(basket, customer);
+        discount = new CustomerDiscount(basket, customer);
         assertEquals(117, discount.applyPercentageDiscount());
     }
 
     @Test
     public void canApplyTwentyPoundDiscount__under_20_pound() {
         basket.addItem(item3);
-        discount = new Discount(basket, customer);
+        discount = new CustomerDiscount(basket, customer);
         assertEquals(10, discount.applyPercentageDiscount());
     }
 
@@ -50,7 +50,7 @@ public class DiscountTest {
         basket.addItem(item2);
         basket.addItem(item3);
         customer = new Customer("Eddie Ng", true);
-        discount = new Discount(basket, customer);
+        discount = new CustomerDiscount(basket, customer);
         assertEquals(115, discount.applyCardDiscount());
     }
 
@@ -60,7 +60,7 @@ public class DiscountTest {
         basket.addItem(item2);
         basket.addItem(item3);
         customer = new Customer("Eddie Ng", false);
-        discount = new Discount(basket, customer);
+        discount = new CustomerDiscount(basket, customer);
         assertEquals(117, discount.applyCardDiscount());
     }
 

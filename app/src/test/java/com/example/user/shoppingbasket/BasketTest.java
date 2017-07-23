@@ -16,7 +16,7 @@ public class BasketTest {
     Item item2;
     Item item3;
     Item item4;
-    Discount discount;
+    Discountable discount;
     Customer customer;
 
 

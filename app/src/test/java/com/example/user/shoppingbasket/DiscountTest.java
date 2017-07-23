@@ -15,8 +15,9 @@ public class DiscountTest {
     Item item1;
     Item item2;
     Item item3;
-    Discount discount;
-    Customer customer;
+    Discountable discount;
+    Shoppable customer;
+    Shoppable staff;
 
 
     @Before
@@ -50,7 +51,7 @@ public class DiscountTest {
         basket.addItem(item3);
         customer = new Customer("Eddie Ng", true);
         discount = new Discount(basket, customer);
-        assertEquals(115, discount.applyLoyaltyDiscount());
+        assertEquals(115, discount.applyCardDiscount());
     }
 
     @Test
@@ -60,7 +61,16 @@ public class DiscountTest {
         basket.addItem(item3);
         customer = new Customer("Eddie Ng", false);
         discount = new Discount(basket, customer);
-        assertEquals(117, discount.applyLoyaltyDiscount());
+        assertEquals(117, discount.applyCardDiscount());
     }
 
+    @Test
+    public void canApplyCardDiscount__has_staff_card() {
+        basket.addItem(item1);
+        basket.addItem(item2);
+        basket.addItem(item3);
+        staff = new Staff("Eddie Ng", true);
+        discount = new Discount(basket, staff);
+        assertEquals(115, discount.applyCardDiscount());
+    }
 }

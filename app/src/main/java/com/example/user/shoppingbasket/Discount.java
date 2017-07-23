@@ -7,10 +7,10 @@ package com.example.user.shoppingbasket;
 public class Discount implements Discountable {
 
     private Basket basket;
-    private Customer customer;
+    private Shoppable customer;
     private final int TWENTYPOUND = 20;
 
-    public Discount(Basket basket, Customer customer) {
+    public Discount(Basket basket, Shoppable customer) {
 
         this.basket = basket;
         this.customer = customer;
@@ -29,11 +29,11 @@ public class Discount implements Discountable {
 
     }
 
-    public int applyLoyaltyDiscount() {
+    public int applyCardDiscount() {
 
         double loyaltyDiscount = applyPercentageDiscount();
 
-        if (customer.hasLoyaltyCard()) {
+        if (customer.hasCard()) {
             loyaltyDiscount = applyPercentageDiscount() * 0.98;
         }
 
@@ -43,7 +43,7 @@ public class Discount implements Discountable {
 
     public int discountPrice() {
 
-        return applyLoyaltyDiscount();
+        return applyCardDiscount();
 
     }
 

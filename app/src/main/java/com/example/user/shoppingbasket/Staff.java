@@ -4,15 +4,15 @@ package com.example.user.shoppingbasket;
  * Created by user on 22/07/2017.
  */
 
-public class Customer implements Shoppable {
+public class Staff implements Shoppable {
 
     private String name;
-    private boolean loyaltyCard;
+    private boolean staffCard;
 
-    public Customer(String name, boolean loyaltyCard) {
+    public Staff(String name, boolean staffCard) {
 
         this.name = name;
-        this.loyaltyCard = loyaltyCard;
+        this.staffCard = staffCard;
 
     }
 
@@ -24,7 +24,7 @@ public class Customer implements Shoppable {
 
     public boolean hasCard() {
 
-        return loyaltyCard;
+        return staffCard;
 
     }
 }

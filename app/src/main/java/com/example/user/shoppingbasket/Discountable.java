@@ -7,7 +7,7 @@ package com.example.user.shoppingbasket;
 public interface Discountable {
 
     int applyPercentageDiscount();
-    int applyLoyaltyDiscount();
+    int applyCardDiscount();
     int discountPrice();
 
 }
